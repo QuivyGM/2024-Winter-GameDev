@@ -50,27 +50,28 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 5.  To Bird, add new Script(ex: BirdScript) and double click to open VS.
 
-> ### Coding
->
-> ```csharp
-> using UnityEngine;
->
-> public class BirdScript : MonoBehaviour
-> {
->     // Start is called once before the first execution of Update after the MonoBehaviour is created
->     void Start() {
->     }
->
->     // Update is called once per frame
->     void Update() {
->     }
-> }
-> ```
->
-> Other functions may be created to be called and executed in both existing or other scripts.  
-> References may be needed to access and modify certain values/properties.
+  > ### Coding
+  >
+  > ```csharp
+  > using UnityEngine;
+  >
+  > public class BirdScript : MonoBehaviour
+  > {
+  >     // Start is called once before the first execution of Update after the MonoBehaviour is created
+  >     void Start() {
+  >     }
+  >
+  >     // Update is called once per frame
+  >     void Update() {
+  >     }
+  > }
+  > ```
+  >
+  > Other functions may be created to be called and executed in both existing or other scripts.  
+  > References may be needed to access and modify certain values/properties.
 
 6. Add upward velocity when space is pressed.
+   
    **6-1.** Initially script can only 'talk' to game object's top bit(name, tag, layer etc) and the Transform component -> need to create reference.
 
    '''csharp
