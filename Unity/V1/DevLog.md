@@ -44,23 +44,22 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 5.  To Bird, add new Script(ex: BirdScript) and double click to open VS.
 
-    > ### Coding
-    >
-    > '''
-    > using UnityEngine;
-    >
-    > public class BirdScript : MonoBehaviour
-    > {
-    > // Start is called once before the first execution of Update after the MonoBehaviour is created
-    > void Start() {
-    > }
-    >
-    > // Update is called once per frame
-    > void Update() {
-    >
-    >      }
-    >
-    > }
-    > '''
-    > Other functions may be created to be called and executed in both existing or other scripts.
-    > References may be needed to access and modify certain values/properties
+   > ### Coding
+   > ```csharp
+   > using UnityEngine;
+   >
+   > public class BirdScript : MonoBehaviour
+   > {
+   >     // Start is called once before the first execution of Update after the MonoBehaviour is created
+   >     void Start() {
+   >     }
+   >
+   >     // Update is called once per frame
+   >     void Update() {
+   >     }
+   > }
+   > ```
+   >
+   > Other functions may be created to be called and executed in both existing or other scripts.  
+   > References may be needed to access and modify certain values/properties.
+
