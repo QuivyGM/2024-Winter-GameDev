@@ -6,8 +6,9 @@ Used Assets: https://www.dropbox.com/scl/fo/h8k4jhq564idb46j31czk/AHeDl5TZW6pZi6
 !Note!
 Tested .gitignore -> Presumed essential files only.
 
-[[V1]]
-Basic Flappy Bird build.
+---
+
+# V1 - Basic Flappy Bird build.
 UI:
 -highscore at top left.
 -Death screen with restart button at 'death'.
