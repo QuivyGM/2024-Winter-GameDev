@@ -8,7 +8,9 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 ## 1. Understanding Unity Layout
 
-![Layout_Image](Layout_Image.png)
+<div align="center">
+  <img src="Layout_Image.png" alt="Layout Image" width="750">
+</div>
 
 1. **Project Window**: Contains all assets used in the game, both internal(Unity) and external.
    Examples: sprites, sound effects, scripts, tilemaps, fonts, etc.
@@ -26,13 +28,17 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 ## 2. Create Bird
 
-![CreateBirdObject.png](CreateBirdObject.png)
+<div align="center">
+  <img src="CreateBirdObject.png" alt="Create Bird Object" width="750">
+</div>
 
 1. Import/Create Bird and add it to **Project Window**.
 
 2. Create **New Object** in **Hierarchy** and in **Inspector** add new component **Sprite Renderer**. Drag Bird Sprite from **Assets(Project Window)** and drag it to Sprite field(game object now references Bird Sprite in Assets).
 
-<img src="CreateBirdObject2.png" alt="Create Bird Object" width="500">
+<div align="center">
+  <img src="CreateBirdObject2.png" alt="Create Bird Object" width="500">
+</div>
 
 3.  To Bird, add component **Rigidbody2D**
 
