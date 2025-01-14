@@ -9,7 +9,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 ## 1. Understanding Unity Layout
 
 <div align="center">
-  <img src="Layout_Image.png" alt="Layout Image" width="750">
+  <img src="Dev Log Image\Layout_Image.png" alt="Layout Image" width="750">
 </div>
 
 1. **Project Window**: Contains all assets used in the game, both internal(Unity) and external.
@@ -29,7 +29,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 ## 2. Create Bird
 
 <div align="center">
-  <img src="CreateBirdObject.png" alt="Create Bird Object" width="750">
+  <img src="Dev Log Image\CreateBirdObject.png" alt="Create Bird Object" width="750">
 </div>
 
 1. Import/Create Bird and add it to **Project Window**.
@@ -37,7 +37,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 2. Create **New Object** in **Hierarchy** and in **Inspector** add new component **Sprite Renderer**. Drag Bird Sprite from **Assets(Project Window)** and drag it to Sprite field(game object now references Bird Sprite in Assets).
 
 <div align="center">
-  <img src="CreateBirdObject2.png" alt="Create Bird Object" width="750">
+  <img src="Dev Log Image\CreateBirdObject2.png" alt="Create Bird Object" width="750">
 </div>
 
 3.  To Bird, add component **Rigidbody2D** -> now when run the Bird will fall downwards and out of frame.
@@ -91,7 +91,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
      - change velocity: myRigidbody (reference name from 6-1) . linearVelocity (vector for velocity direction) = _vector value_ (Vector2._direction_ is shorthand for vector direction - ex: Vector2.up == (0,1))
      - allow ease of testing and value changes create _public float flapStrength_ to change values in Unity Window
         <div align="center">
-           <img src="flapStrenghField.png" alt="flapStrenghField.png" width="500">
+           <img src="Dev Log Image\flapStrenghField.png" alt="flapStrenghField.png" width="500">
         </div>
     
      ```csharp
