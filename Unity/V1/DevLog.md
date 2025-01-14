@@ -74,7 +74,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
    
    **6-1.** Initially script can only 'talk' to game object's top bit(name, tag, layer etc) and the Transform component -> need to create reference.
 
-     '''csharp
+     ```csharp
   
      public class BirdScript : MonoBehaviour
      {
@@ -82,7 +82,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
      public Rigidbody2D myRigidbody; // gives script access to values in Rigidbody2d
   
      void Start() {
-     '''
+     ```
      -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
 
    **6.2.** Assign velocity when space is pressed.
@@ -94,7 +94,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
            <img src="flapStrenghField.png" alt="flapStrenghField.png" width="500">
         </div>
   
-     '''csharp
+     ```csharp
      public float flapStrength; // preferably place above void Start()
   
      void Update() {
@@ -103,4 +103,4 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
      myRigidbody.linearVelocity = Vector2.up \* flapStrength; //Vector2.up == (0,1) -> changes velocity to move towards (0,1) of current position (times flapStrength)
      }
      }
-     '''
+     ```
