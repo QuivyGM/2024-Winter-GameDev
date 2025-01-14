@@ -83,7 +83,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
       
          void Start() {
          ```
-         -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
+     -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
 
    **6.2.** Assign velocity when space is pressed.
 
