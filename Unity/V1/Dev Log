@@ -8,7 +8,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 ## 1. Understanding Unity Layout
 
-![Layout image](Layout_Image.png)
+![Layout_Image](Layout_Image.png)
 
 1. **Project Window**: Contains all assets used in the game, both internal(Unity) and external.
    Examples: sprites, sound effects, scripts, tilemaps, fonts, etc.
