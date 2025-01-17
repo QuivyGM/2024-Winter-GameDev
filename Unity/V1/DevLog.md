@@ -9,7 +9,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 ## 1. Understanding Unity Layout
 
 <div align="center">
-  <img src="Dev Log Image\Layout_Image.png" alt="Layout Image" width="750">
+  <img src="https://github.com/user-attachments/assets/cb148e29-2498-4e2d-84f9-9331664ee5e7" alt="Layout Image" width="750">
 </div>
 
 1. **Project Window**: Contains all assets used in the game, both internal(Unity) and external.
@@ -31,7 +31,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 ## 2. Create Bird
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/cb148e29-2498-4e2d-84f9-9331664ee5e7" alt="Create Bird Object1" width="750">
+  <img src="https://github.com/user-attachments/assets/8c37c042-fcdf-4c08-b267-f864140f14d3" alt="Create Bird Object1" width="750">
 </div>
 
 **1. Import/Create Bird and add it to ***Project Window***.**
