@@ -112,7 +112,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
        ```
        
 **7. Create Prefab for Pipes**
-  > **Prefab**(Prefabricated Gameobjct): basically a blueprint for gameobjcts that can be resued
+  > **[Prefab](https://docs.unity3d.com/Manual/Prefabs.html)**(Prefabricated Gameobjct): basically a blueprint for gameobjcts that can be resued
   1. Create new Gameobject("Pipes") and add child object *Top_Pipe*. Adjust position, size, rotation values as needed.
   2. Add BoxCollider2D component. (Rigidbody is not needed as it isn't affected by physics)
   3. Create code for pipe movement.
