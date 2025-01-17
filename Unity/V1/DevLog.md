@@ -96,9 +96,9 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
      - change velocity: myRigidbody (reference name from 6-1) . linearVelocity (vector for velocity direction) = _vector value_ (Vector2._direction_ is shorthand for vector direction - ex: Vector2.up == (0,1))
      - allow ease of testing and value changes create _public float flapStrength_ to change values in Unity Window
         <div align="center">
-           <img src="Dev Log Image\flapStrenghField.png" alt="flapStrenghField.png" width="500">
+           <img src="https://github.com/user-attachments/assets/c0cbe21f-9d82-471c-a94f-6f0ed09f8559" alt="flapStrenghField.png" width="500">
         </div>
-    
+
        ```csharp
        public float flapStrength; // preferably place above void Start()
       
