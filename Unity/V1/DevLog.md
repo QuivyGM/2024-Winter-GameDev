@@ -171,7 +171,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 ## 4. Logic Manager & UI
 
-<li><strong>1. Create Scoreboard</strong></li>
+<strong>1. Create Scoreboard</strong>
   <ol>
     <li>1-1. Create new object: Legacy/Text. Will need to zoom out to see the screen.</li>
     <li>1-2. Canvas/Canvas Scaler -> set to <em>'Scale With Screen Size'</em> and set <em>Reference Resolution</em>.</li>
