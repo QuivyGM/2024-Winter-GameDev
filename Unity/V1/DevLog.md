@@ -76,7 +76,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 **6. Add upward velocity when [space] is pressed.**
    
-    **6-1. Initially script can only 'talk' to game object's top bit(name, tag, layer etc) and the Transform component -> need to create reference.**
+  **6-1. Initially script can only 'talk' to game object's top bit(name, tag, layer etc) and the Transform component -> need to create reference.**
 
          ```csharp
       
@@ -89,7 +89,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
          ```
      -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
 
-    **6.2. Assign velocity when space is pressed.**
+  **6.2. Assign velocity when space is pressed.**
 
      - Keyboard Input: Input.GetKeyDown(KeyCode._key name here_)
      - change velocity: myRigidbody (reference name from 6-1) . linearVelocity (vector for velocity direction) = _vector value_ (Vector2._direction_ is shorthand for vector direction - ex: Vector2.up == (0,1))
