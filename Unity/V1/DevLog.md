@@ -239,5 +239,24 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
           <img src="https://github.com/user-attachments/assets/e3e5d240-4c7a-4b3a-a094-2c7135d25f01" style="max-width: 45%;"/>
           <img src="https://github.com/user-attachments/assets/bca65d9c-227c-4369-b424-b884b28e9dc2" style="max-width: 45%;"/>
         </div>
+        - allows checking if collision was on Bird's layer (+ future proof code by adding argument for addScore in LogicScript)
+        
+        > Pipe Middle Script
+        
+        ```csharp
+        private void OnTriggerEnter2D(Collider2D collision) {
+            if (collision.gameObject.layer == 3) {
+                logic.addScore(1);
+            }        
+        }
+        ```
+        > Logic Script
+        ```csharp
+        public void addScore(int scoreToAdd) {
+            playerScore += scoreToAdd;
+            scoreText.text = playerScore.ToString();
+        }
+        ```
+---
 
-
+## 5. Game Over Screen
