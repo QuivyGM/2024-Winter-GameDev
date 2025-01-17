@@ -142,7 +142,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
       > [deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html): interval in seconds from the last frame to the current one
       -if statement to [destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) objecty if passing deadzone + [debug.log](https://docs.unity3d.com/ScriptReference/Debug.Log.html) to check destruction
   4. Copy-Paste *Top_Pipe* and add it as another child object of "Pipes". Adjust position, rotation, scale as needed.
-  <div style="text-align: center;">
+  <div align="center">
     <img src="https://github.com/user-attachments/assets/3e3d2eff-6a0e-4768-83fe-1e3757096996" width="500" />
   </div>
   
@@ -155,7 +155,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
     > Instantiate: create a new copy of an object, like spawning a new enemy or item in the game.
     >                   Instantiate(myPrefab, position, rotation);
   5. Create timer to space out spawning of Pipes.
-  <div style="text-align: center;">
+  <div align="center">
      <img src="https://github.com/user-attachments/assets/d279acb1-d656-437b-aa64-2403f39c94d4" width="500" />
   </div>
 
