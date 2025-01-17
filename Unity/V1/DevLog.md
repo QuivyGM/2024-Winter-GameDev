@@ -142,7 +142,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
       > [deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html): interval in seconds from the last frame to the current one
       -if statement to [destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) objecty if passing deadzone + [debug.log](https://docs.unity3d.com/ScriptReference/Debug.Log.html) to check destruction
   4. Copy-Paste *Top_Pipe* and add it as another child object of "Pipes". Adjust position, rotation, scale as needed.
-  <div align="center">
+  
   ![image](https://github.com/user-attachments/assets/3e3d2eff-6a0e-4768-83fe-1e3757096996)
-  </div>
+  
 
