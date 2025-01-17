@@ -110,8 +110,11 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
          }
        }
        ```
-       
-**7. Create Prefab for Pipes**
+---
+
+## 3. Create Pipe
+
+**1. Create Prefab for Pipes**
   > **[Prefab](https://docs.unity3d.com/Manual/Prefabs.html)**(Prefabricated Gameobjct): basically a blueprint for gameobjcts that can be resued
   1. Create new Gameobject("Pipes") and add child object *Top_Pipe*. Adjust position, size, rotation values as needed.
   2. Add BoxCollider2D component. (Rigidbody is not needed as it isn't affected by physics)
@@ -148,7 +151,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   
   6. Drag gameObject from Hierarchy to Project Window to finalize Prefab creation. (You can delete Pipe from hierarchy afterwards)
 
-**8. Create Pipe Spawner**
+**2. Create Pipe Spawner**
   1. Create new Gameobject("PipeSpawner") and adjuts position values as needed.
   2. Create script component and create reference for game object and(in Unity) drag Pipe prefab into reference field.
   3. In *void Update()* use Instantiate() to write code for spawning pipes.
