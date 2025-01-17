@@ -45,6 +45,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 **3.  To Bird, add component ***Rigidbody2D***.**
     -> now when run the Bird will fall downwards and out of frame.
+    > [Rigidbody](https://docs.unity3d.com/Manual/rigidbody-physics-section.html): enable physics-based behaviour such as movement, gravity, and collision.
 
   - Rigidbody2D: turns object into physics object with gravity
 
@@ -82,7 +83,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
     
        public class BirdScript : MonoBehaviour
        {
-       //references that can be accessed/modified from unity
+       //references that can be /modifaccessedied from unity
        public Rigidbody2D myRigidbody; // gives script access to values in Rigidbody2d
     
        void Start() {
@@ -109,3 +110,9 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
          }
        }
        ```
+       
+**7. Create Prefab for Pipes**
+  > **Prefab**(Prefabricated Gameobjct): basically a blueprint for gameobjcts that can be resued
+1. Create new Gameobject and add child object *Top_Pipe*. Adjust position, size, rotation values as needed.
+2. Add BoxCollider2D component. (Rigidbody is not needed as it isn't affected by physics)
+3. Copy-Paste *Top_Pipe* and 
