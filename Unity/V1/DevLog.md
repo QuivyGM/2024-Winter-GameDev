@@ -26,29 +26,33 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 4. **Scene**: Provides visual representation of the current scene or level.
 
+---
+
 ## 2. Create Bird
 
 <div align="center">
   <img src="Dev Log Image\CreateBirdObject.png" alt="Create Bird Object" width="750">
 </div>
 
-1. Import/Create Bird and add it to **Project Window**.
+**1. Import/Create Bird and add it to ***Project Window***.**
 
-2. Create **New Object** in **Hierarchy** and in **Inspector** add new component **Sprite Renderer**. Drag Bird Sprite from **Assets(Project Window)** and drag it to Sprite field(game object now references Bird Sprite in Assets).
+**2. Create ***New Object*** in ***Hierarchy*** and in ***Inspector*** add new component ***Sprite Renderer***.**
+  - Drag Bird Sprite from **Assets(Project Window)** and drag it to Sprite field(game object now references Bird Sprite in Assets).
 
 <div align="center">
   <img src="Dev Log Image\CreateBirdObject2.png" alt="Create Bird Object" width="750">
 </div>
 
-3.  To Bird, add component **Rigidbody2D** -> now when run the Bird will fall downwards and out of frame.
+**3.  To Bird, add component ***Rigidbody2D***.**
+    -> now when run the Bird will fall downwards and out of frame.
 
-    - Rigidbody2D turns object into physics object with gravity
+  - Rigidbody2D: turns object into physics object with gravity
 
-4.  To Bird, add component Collider- **Circle Collider 2D** and adjust collider to preference.
+**4.  To Bird, add component Collider- ***Circle Collider 2D*** and adjust collider to preference.**
 
     - Collider allows object to interact with other objects
 
-5.  To Bird, add new Script(ex: BirdScript) and double click to open VS.
+**5.  To Bird, add new Script(ex: BirdScript) and double click to open VS.**
 
   > ### Coding
   >
@@ -70,9 +74,9 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   > Other functions may be created to be called and executed in both existing or other scripts.  
   > References may be needed to access and modify certain values/properties.
 
-6. Add upward velocity when space is pressed.
+**6. Add upward velocity when [space] is pressed.**
    
-   **6-1.** Initially script can only 'talk' to game object's top bit(name, tag, layer etc) and the Transform component -> need to create reference.
+   **6-1. Initially script can only 'talk' to game object's top bit(name, tag, layer etc) and the Transform component -> need to create reference.**
 
          ```csharp
       
@@ -85,7 +89,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
          ```
      -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
 
-   **6.2.** Assign velocity when space is pressed.
+   **6.2. Assign velocity when space is pressed.**
 
      - Keyboard Input: Input.GetKeyDown(KeyCode._key name here_)
      - change velocity: myRigidbody (reference name from 6-1) . linearVelocity (vector for velocity direction) = _vector value_ (Vector2._direction_ is shorthand for vector direction - ex: Vector2.up == (0,1))
