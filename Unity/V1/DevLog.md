@@ -1,6 +1,6 @@
 # Flappy Clone V1 development log
 
-Goal: create basic flappy bird with bird, pipe, scoreboard UI and end screen.
+Goal: create basic flappy bird with bird, pipe, logic, UI and end screen.
 
 Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=XtQMytORBmM)
 
