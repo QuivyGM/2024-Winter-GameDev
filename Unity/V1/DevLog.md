@@ -50,7 +50,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 **4.  To Bird, add component Collider- ***Circle Collider 2D*** and adjust collider to preference.**
 
-    - Collider allows object to interact with other objects
+  > Collider: enabling interactions and handling physical behavior in games, especially when combined with Rigidbody components.
 
 **5.  To Bird, add new Script(ex: BirdScript) and double click to open VS.**
 
