@@ -40,7 +40,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   - Drag Bird Sprite from **Assets(Project Window)** and drag it to Sprite field(game object now references Bird Sprite in Assets).
 
 <div align="center">
-  <img src="Dev Log Image\CreateBirdObject2.png" alt="Create Bird Object" width="750">
+  <img src="https://github.com/user-attachments/assets/1f8269d9-17a7-4ffb-88ba-023864c68c80" alt="Create Bird Object" width="750">
 </div>
 
 **3.  To Bird, add component ***Rigidbody2D***.**
