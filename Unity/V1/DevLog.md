@@ -89,23 +89,23 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
          ```
      -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
 
-  2. *Assign velocity when space is pressed.**
+  2. Assign velocity when space is pressed.
 
-   - Keyboard Input: Input.GetKeyDown(KeyCode._key name here_)
-   - change velocity: myRigidbody (reference name from 6-1) . linearVelocity (vector for velocity direction) = _vector value_ (Vector2._direction_ is shorthand for vector direction - ex: Vector2.up == (0,1))
-   - allow ease of testing and value changes create _public float flapStrength_ to change values in Unity Window
-      <div align="center">
-         <img src="Dev Log Image\flapStrenghField.png" alt="flapStrenghField.png" width="500">
-      </div>
+     - Keyboard Input: Input.GetKeyDown(KeyCode._key name here_)
+     - change velocity: myRigidbody (reference name from 6-1) . linearVelocity (vector for velocity direction) = _vector value_ (Vector2._direction_ is shorthand for vector direction - ex: Vector2.up == (0,1))
+     - allow ease of testing and value changes create _public float flapStrength_ to change values in Unity Window
+        <div align="center">
+           <img src="Dev Log Image\flapStrenghField.png" alt="flapStrenghField.png" width="500">
+        </div>
     
-     ```csharp
-     public float flapStrength; // preferably place above void Start()
-    
-     void Update() {
-     if (Input.GetKeyDown(KeyCode.Space) == true) //Input.GetKeyDown(KeyCode.Space)
-       {
-       myRigidbody.linearVelocity = Vector2.up * flapStrength;
-         //Vector2.up == (0,1) -> changes velocity to move towards (0,1) of current position (times flapStrength)
+       ```csharp
+       public float flapStrength; // preferably place above void Start()
+      
+       void Update() {
+       if (Input.GetKeyDown(KeyCode.Space) == true) //Input.GetKeyDown(KeyCode.Space)
+         {
+         myRigidbody.linearVelocity = Vector2.up * flapStrength;
+           //Vector2.up == (0,1) -> changes velocity to move towards (0,1) of current position (times flapStrength)
+         }
        }
-     }
-     ```
+       ```
