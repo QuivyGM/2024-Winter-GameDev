@@ -173,5 +173,49 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 **1. Create Scoreboard**
   1. Create new object: Legacy/Text. Will need to zoom out to see the screen.
-  1. Canvas/Canvas Scaler -> set to _'Scale With Screen Size'_ and set _Reference Resolution_.
-  1. Set Text position, Width, Height, Font, Default Text, Text Color.
+  2. Canvas/Canvas Scaler -> set to _'Scale With Screen Size'_ and set _Reference Resolution_.
+  3. Set Text position, Width, Height, Font, Default Text, Text Color.
+     ![image](https://github.com/user-attachments/assets/a6a75f45-b206-4879-8078-f196a200ba58)
+
+**2. Create Logic Manager**
+  1. Create new Game Object with script component _logicScript_
+  2. Create code for saving, showing, modifying score
+
+  ```csharp
+  using UnityEngine;
+  using UnityEngine.UI;  // for 'Text' variable
+  
+  public class LogicScript : MonoBehaviour {
+      public int playerScore=0;
+      public Text scoreText;
+      public GameObject gameOverScreen;
+  
+      void Start() {
+          playerScore = 0;
+      }
+      [ContextMenu("Increase Score")]
+      public void addScore(int scoreToAdd) {
+          playerScore += scoreToAdd;
+          scoreText.text = playerScore.ToString();
+      }
+  }
+  ```
+  - public reference for playerScore(int because lack of need for ) and scoreText
+  - to create/access a text variable there is a need _using UnityEngine.UI;_
+  - function is created for adding score and updating it to text (.ToString) and **[ContextMenu("Name_here")]** to access in Unity(allows testing)
+
+**3. Trigger for score**
+  1. Add gameObject that in the middle of Pipes with Box Collider 2D. To change shape change Size(in Collider) and check _Is Trigger_ and add script.
+  2. Create code for adding score when collision is triggered.
+     - 2-1. Referencing won't work as Pipe will only exist when spawner starts making Pipes. Use **[Tag]**
+       ![image](https://github.com/user-attachments/assets/06a4814f-ed59-4884-8a66-cec00e980f71)
+       <div style="display: flex; justify-content: space-between;">
+          <img src="https://github.com/user-attachments/assets/6de5153e-763d-4f04-8074-c2d918a05f44" style="max-width: 45%;"/>
+          <img src="https://github.com/user-attachments/assets/74db7808-7715-43eb-8d57-eb2f215f201d" style="max-width: 45%;"/>
+        </div>
+
+
+
+     - 
+
+  
