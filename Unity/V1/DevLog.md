@@ -51,7 +51,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 **4.  To Bird, add component Collider- ***Circle Collider 2D*** and adjust collider to preference.**
 
-  > Collider: enabling interactions and handling physical behavior in games, especially when combined with Rigidbody components.
+  > [Collider](https://docs.unity3d.com/Manual/2d-physics/collider/collider-2d-landing.html): enabling interactions and handling physical behavior in games, especially when combined with Rigidbody components.
 
 **5.  To Bird, add new Script(ex: BirdScript) and double click to open VS.**
 
@@ -113,6 +113,36 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
        
 **7. Create Prefab for Pipes**
   > **Prefab**(Prefabricated Gameobjct): basically a blueprint for gameobjcts that can be resued
-1. Create new Gameobject and add child object *Top_Pipe*. Adjust position, size, rotation values as needed.
-2. Add BoxCollider2D component. (Rigidbody is not needed as it isn't affected by physics)
-3. Copy-Paste *Top_Pipe* and 
+  1. Create new Gameobject("Pipes") and add child object *Top_Pipe*. Adjust position, size, rotation values as needed.
+  2. Add BoxCollider2D component. (Rigidbody is not needed as it isn't affected by physics)
+  3. Create code for pipe movement.
+      ```csharp
+       using UnityEngine;
+      
+      public class pipeMoveScript : MonoBehaviour
+      {
+        public float moveSpeed = 1f;
+        public float deadZone = -11f;
+      
+        // Update is called once per frame
+        void Update()
+        {
+            transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+      
+            if (transform.position.x < deadZone) {
+                Debug.Log("Pipe Deleted");
+                Destroy(gameObject);
+            }
+        }
+      }
+      ```
+      - public floats for movementSpeed(speed of which the pipes move) and deadzone(area where pipes despawn)
+      - change transform.position values to move left by value of Vector3.left (-1, 0) multiplied by moveSpeed.
+        - movement value is multiplied by deltaTime to avoid issue of movement being tied to framerate (void Update is run every frame -> movement happens every frame
+      > [deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html): interval in seconds from the last frame to the current one
+      -if statement to [destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) objecty if passing deadzone + [debug.log](https://docs.unity3d.com/ScriptReference/Debug.Log.html) to check destruction
+  4. Copy-Paste *Top_Pipe* and add it as another child object of "Pipes". Adjust position, rotation, scale as needed.
+  <div align="center">
+  ![image](https://github.com/user-attachments/assets/3e3d2eff-6a0e-4768-83fe-1e3757096996)
+  </div>
+
