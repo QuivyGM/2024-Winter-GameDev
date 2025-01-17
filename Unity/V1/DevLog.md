@@ -78,15 +78,15 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
    
   1. **Initially script can only 'talk' to game object's top bit(name, tag, layer etc) and the Transform component -> need to create reference.**
 
-         ```csharp
-      
-         public class BirdScript : MonoBehaviour
-         {
-         //references that can be accessed/modified from unity
-         public Rigidbody2D myRigidbody; // gives script access to values in Rigidbody2d
-      
-         void Start() {
-         ```
+       ```csharp
+    
+       public class BirdScript : MonoBehaviour
+       {
+       //references that can be accessed/modified from unity
+       public Rigidbody2D myRigidbody; // gives script access to values in Rigidbody2d
+    
+       void Start() {
+       ```
      -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
 
   2. Assign velocity when space is pressed.
