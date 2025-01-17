@@ -45,7 +45,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 **3.  To Bird, add component ***Rigidbody2D***.**
     -> now when run the Bird will fall downwards and out of frame.
-    > [Rigidbody](https://docs.unity3d.com/Manual/rigidbody-physics-section.html): enable physics-based behaviour such as movement, gravity, and collision.
+  > [Rigidbody](https://docs.unity3d.com/Manual/rigidbody-physics-section.html): enable physics-based behaviour such as movement, gravity, and collision.
 
   - Rigidbody2D: turns object into physics object with gravity
 
