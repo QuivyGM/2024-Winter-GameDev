@@ -169,4 +169,4 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 ---
 
-## 4. Game Logic
+## 4. Game Logic & UI
