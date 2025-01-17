@@ -142,9 +142,11 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
       > [deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html): interval in seconds from the last frame to the current one
       -if statement to [destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) objecty if passing deadzone + [debug.log](https://docs.unity3d.com/ScriptReference/Debug.Log.html) to check destruction
   4. Copy-Paste *Top_Pipe* and add it as another child object of "Pipes". Adjust position, rotation, scale as needed.
-  <img src="https://github.com/user-attachments/assets/3e3d2eff-6a0e-4768-83fe-1e3757096996" width="300" />
+  <div style="text-align: center;">
+    <img src="https://github.com/user-attachments/assets/3e3d2eff-6a0e-4768-83fe-1e3757096996" width="500" />
+  </div>
   
-  5. Drag gameObject from Hierarchy to Project Window to finalize Prefab creation. (You can delete Pipe from hierarchy afterwards)
+  6. Drag gameObject from Hierarchy to Project Window to finalize Prefab creation. (You can delete Pipe from hierarchy afterwards)
 
 **8. Create Pipe Spawner**
   1. Create new Gameobject("PipeSpawner") and adjuts position values as needed.
@@ -153,7 +155,9 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
     > Instantiate: create a new copy of an object, like spawning a new enemy or item in the game.
     >                   Instantiate(myPrefab, position, rotation);
   5. Create timer to space out spawning of Pipes.
-   <img src="https://github.com/user-attachments/assets/d279acb1-d656-437b-aa64-2403f39c94d4" width="300" />
+  <div style="text-align: center;">
+     <img src="https://github.com/user-attachments/assets/d279acb1-d656-437b-aa64-2403f39c94d4" width="500" />
+  </div>
 
   - pipe spawn is made as function 'spawnPipe' to ease repetitive use
 
