@@ -209,7 +209,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   2. Create code for adding score when collision is triggered.
      - Referencing won't work as Pipe will only exist when spawner starts making Pipes. Use **[Tag]**
        ![image](https://github.com/user-attachments/assets/06a4814f-ed59-4884-8a66-cec00e980f71)
-       <div style="display: flex; justify-content: space-between;">
+       <div style="display: flex; justify-content: center; gap: 10px;">
           <img src="https://github.com/user-attachments/assets/6de5153e-763d-4f04-8074-c2d918a05f44" style="max-width: 45%;"/>
           <img src="https://github.com/user-attachments/assets/74db7808-7715-43eb-8d57-eb2f215f201d" style="max-width: 45%;"/>
         </div>
@@ -235,7 +235,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
         ```
   3. Put bird in different layer to make sure that it is Bird that is passing middle.
   ![image](https://github.com/user-attachments/assets/4d05a00d-65a0-4326-aebb-6dcf06df1b2c)
-        <div style="display: flex; justify-content: space-between;">
+        <div style="display: flex; justify-content: center; gap: 10px;">
           <img src="https://github.com/user-attachments/assets/e3e5d240-4c7a-4b3a-a094-2c7135d25f01" style="max-width: 45%;"/>
           <img src="https://github.com/user-attachments/assets/bca65d9c-227c-4369-b424-b884b28e9dc2" style="max-width: 45%;"/>
         </div>
