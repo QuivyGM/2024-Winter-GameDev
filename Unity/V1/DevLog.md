@@ -167,4 +167,6 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   6. **To spawn pipes at differing heights** create public float heightoffset and within spawnPipe create float lowestPoint and highestPoint using heighoffset. (allows adjustment in Unity screen)
   7. Change position value in Instantiate to *new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint))*. Pipes will now spawn in random height within set range.
 
+---
 
+## 4. Game Logic
