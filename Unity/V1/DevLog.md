@@ -276,8 +276,9 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
        >          logic.addScore(1);
        >      }
        >  }
-
-        ```
+       >  
+       >  ```
+       
   4. Put bird in different layer to make sure that it is Bird that is passing middle.
   ![image](https://github.com/user-attachments/assets/4d05a00d-65a0-4326-aebb-6dcf06df1b2c)
         <div style="display: flex; justify-content: center; gap: 10px;">
@@ -312,5 +313,112 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   1. Create new gameObject Text, Button in Canvas object and adjust position, rotation, text.
 ![image](https://github.com/user-attachments/assets/d8e2adba-458f-4750-ab97-2988441bceff)
   - Button can call public function
-  3.
+  3. create function that recalls active scene.
+
+    > ### LogicScript
+    >
+    > ```csharp
+    > using UnityEngine;
+    > using UnityEngine.UI;
+    > using UnityEngine.SceneManagement;
+    > 
+    > public class LogicScript : MonoBehaviour {
+    >     public int playerScore=0;
+    >     public Text scoreText;
+    > 
+    >     void Start() {
+    >         playerScore = 0;
+    >     }
+    >     [ContextMenu("Increase Score")]
+    >     public void addScore(int scoreToAdd) {
+    >         playerScore += scoreToAdd;
+    >         scoreText.text = playerScore.ToString();
+    >     }
+    > 
+    >     public void restart() {
+    >         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    >     }
+    > }
+    > ```
+    > - using UnityEngine.SceneManagement to allow access to scene management and write function reloading current active scene
+
+**2. Reset Game at button press**
+  1. Add event to button and assign restart function
+    ![image](https://github.com/user-attachments/assets/55174ee9-996f-4b07-8a8f-66a615327ec5)
+  2. Disable GameOver Object to hide it
+    ![image](https://github.com/user-attachments/assets/f83b6004-c037-4c25-8608-7b188d29dd10)
+
+**3. Game Over function**
+  1. In LogicScript create reference to gameObject and create function setting object activity true
+  
+      > ### LogicScript
+      >
+      > ```csharp
+      > public GameObject gameOverScreen;
+      >
+      > public void restart() {
+      >   SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      > }
+      > ```
+
+  2. Make function trigger when Bird collides with Pipe.
+
+     > ### BirdScript
+     >
+     > ```csharp
+     > using UnityEngine;
+     > 
+     >  public class BirdScript : MonoBehaviour
+     >  {
+     >      //references that can be accessed/modified from unity
+     >      public Rigidbody2D myRigidbody;     // gives vs(and unity?) access to values from rigidbody2d
+     >      public float flapStrength;          // gives unity a way to change value without constantly returning to vs -> can change values while sim is running
+     >      public LogicScript logic;
+     >      public bool birdIsAlive = true;
+     >  
+     >      void Start() {
+     >          logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+     >      }
+     >  
+     >      void Update() {
+     >          if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive) //Input.GetKeyDown(KeyCode.Space) && birdIsAlive
+     >          {
+     >              myRigidbody.linearVelocity = Vector2.up * flapStrength;
+     >               //Vector2.up == (0,1) -> changes velocity to move towards (0,1) of current position
+     >          }
+     >      }
+     >  
+     >      private void OnCollisionEnter2D(Collision2D collision)
+     >      {
+     >          logic.gameOver();
+     >          birdIsAlive = false;
+     >      }
+     >  }
+     > ```
+     > - drag & drop in Unity can be used instead of using _logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();_
+     > - Use OnCollisionEnter2D to trigger _gameOver_
+     > - create public bool _birdIsAlive_ to check if bird is aliv and set to false on collision
+     > - Disable jump if _birdIsAlive_ is not true
+
+---
+
+## 6. Build Game
+
+**1. File -> Build Profile -> Click Window -> Run**
+**2. Game file is created in designated location**
+**3. Play .exe**
+
+
+---
+
+## 7. Possible ugragdes
+1. Newer Input system
+2. TextMeshPro to replace Legacy text
+3. Start/Title Screen
+4. Particle system for clouds
+5. Game Over for leaving the screen
+6. Sound effects
+7. Highscore
++Other systems
+
 
