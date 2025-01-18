@@ -313,34 +313,34 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   1. Create new gameObject Text, Button in Canvas object and adjust position, rotation, text.
 ![image](https://github.com/user-attachments/assets/d8e2adba-458f-4750-ab97-2988441bceff)
   - Button can call public function
-  3. create function that recalls active scene.
+  2. create function that recalls active scene.
 
-    > ### LogicScript
-    >
-    > ```csharp
-    > using UnityEngine;
-    > using UnityEngine.UI;
-    > using UnityEngine.SceneManagement;
-    > 
-    > public class LogicScript : MonoBehaviour {
-    >     public int playerScore=0;
-    >     public Text scoreText;
-    > 
-    >     void Start() {
-    >         playerScore = 0;
-    >     }
-    >     [ContextMenu("Increase Score")]
-    >     public void addScore(int scoreToAdd) {
-    >         playerScore += scoreToAdd;
-    >         scoreText.text = playerScore.ToString();
-    >     }
-    > 
-    >     public void restart() {
-    >         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    >     }
-    > }
-    > ```
-    > - using UnityEngine.SceneManagement to allow access to scene management and write function reloading current active scene
+      > ### LogicScript
+      >
+      > ```csharp
+      > using UnityEngine;
+      > using UnityEngine.UI;
+      > using UnityEngine.SceneManagement;
+      > 
+      > public class LogicScript : MonoBehaviour {
+      >     public int playerScore=0;
+      >     public Text scoreText;
+      > 
+      >     void Start() {
+      >         playerScore = 0;
+      >     }
+      >     [ContextMenu("Increase Score")]
+      >     public void addScore(int scoreToAdd) {
+      >         playerScore += scoreToAdd;
+      >         scoreText.text = playerScore.ToString();
+      >     }
+      > 
+      >     public void restart() {
+      >         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      >     }
+      > }
+      > ```
+      > - using UnityEngine.SceneManagement to allow access to scene management and write function reloading current active scene
 
 **2. Reset Game at button press**
   1. Add event to button and assign restart function
