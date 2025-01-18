@@ -55,7 +55,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 **5.  To Bird, add new Script(ex: BirdScript) and double click to open VS.**
 
-  > ### Coding
+  > ### BirdScript
   >
   > ```csharp
   > using UnityEngine;
@@ -79,16 +79,17 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
    
   1. **Initially script can only 'talk' to game object's top bit(name, tag, layer etc) and the Transform component -> need to create reference.**
 
-       ```csharp
-    
-       public class BirdScript : MonoBehaviour
-       {
-       //references that can be /modifaccessedied from unity
-       public Rigidbody2D myRigidbody; // gives script access to values in Rigidbody2d
-    
-       void Start() {
-       ```
-     -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
+      > ### BirdScript
+      >
+      > ```csharp      > 
+      >  public class BirdScript : MonoBehaviour
+      >  {
+      >  //references that can be /modifaccessedied from unity
+      >  public Rigidbody2D myRigidbody; // gives script access to values in Rigidbody2d
+      > 
+      >  void Start() {
+      > ```
+      > -> Script component now has field for Ridibody 2D. Dragging Rigidbody 2D component will assign reference.
 
   2. Assign velocity when space is pressed.
 
@@ -99,17 +100,19 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
            <img src="https://github.com/user-attachments/assets/c0cbe21f-9d82-471c-a94f-6f0ed09f8559" alt="flapStrenghField.png" width="500">
         </div>
 
-       ```csharp
-       public float flapStrength; // preferably place above void Start()
-      
-       void Update() {
-       if (Input.GetKeyDown(KeyCode.Space) == true) //Input.GetKeyDown(KeyCode.Space)
-         {
-         myRigidbody.linearVelocity = Vector2.up * flapStrength;
-           //Vector2.up == (0,1) -> changes velocity to move towards (0,1) of current position (times flapStrength)
-         }
-       }
-       ```
+       > ### BirdScript
+       >
+       > ```csharp  
+       > public float flapStrength; // preferably place above void Start()
+       > 
+       > void Update() {
+       > if (Input.GetKeyDown(KeyCode.Space) == true) //Input.GetKeyDown(KeyCode.Space)
+       > {
+       > myRigidbody.linearVelocity = Vector2.up * flapStrength;
+       >  //Vector2.up == (0,1) -> changes velocity to move towards (0,1) of current position (times flapStrength)
+       >  }
+       >  }
+      >  ```
 ---
 
 ## 3. Create Pipe
@@ -119,32 +122,35 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   1. Create new Gameobject("Pipes") and add child object *Top_Pipe*. Adjust position, size, rotation values as needed.
   2. Add BoxCollider2D component. (Rigidbody is not needed as it isn't affected by physics)
   3. Create code for pipe movement.
-      ```csharp
-       using UnityEngine;
-      
-      public class pipeMoveScript : MonoBehaviour
-      {
-        public float moveSpeed = 1f;
-        public float deadZone = -11f;
-      
-        // Update is called once per frame
-        void Update()
-        {
-            transform.position += Vector3.left * moveSpeed * Time.deltaTime;
-      
-            if (transform.position.x < deadZone) {
-                Debug.Log("Pipe Deleted");
-                Destroy(gameObject);
-            }
-        }
-      }
-      ```
-      - public floats for movementSpeed(speed of which the pipes move) and deadzone(area where pipes despawn)
-      - change transform.position values to move left by value of Vector3.left (-1, 0) multiplied by moveSpeed.
-        - movement value is multiplied by deltaTime to avoid issue of movement being tied to framerate (void Update is run every frame -> movement happens every frame
-      > [deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html): interval in seconds from the last frame to the current one
+
+     > ### PipeMovement
+     > 
+     > ```csharp
+     >   using UnityEngine;
+     >  
+     >  public class pipeMoveScript : MonoBehaviour
+     >  {
+     >    public float moveSpeed = 1f;
+     >    public float deadZone = -11f;
+     >  
+     >    // Update is called once per frame
+     >    void Update()
+     >    {
+     >        transform.position += Vector3.left * moveSpeed * Time.deltaTime;
+     >  
+     >        if (transform.position.x < deadZone) {
+     >            Debug.Log("Pipe Deleted");
+     >            Destroy(gameObject);
+     >        }
+     >    }
+     >  }
+     >  ```
+     >  - public floats for movementSpeed(speed of which the pipes move) and deadzone(area where pipes despawn)
+     >  - change transform.position values to move left by value of Vector3.left (-1, 0) multiplied by moveSpeed.
+     >    - movement value is multiplied by deltaTime to avoid issue of movement being tied to framerate (void Update is run every frame -> movement happens every frame
+     >  > [deltaTime](https://docs.unity3d.com/ScriptReference/Time-deltaTime.html): interval in seconds from the last frame to the current one
       -if statement to [destroy](https://docs.unity3d.com/ScriptReference/Object.Destroy.html) objecty if passing deadzone + [debug.log](https://docs.unity3d.com/ScriptReference/Debug.Log.html) to check destruction
-  4. Copy-Paste *Top_Pipe* and add it as another child object of "Pipes". Adjust position, rotation, scale as needed.
+  5. Copy-Paste *Top_Pipe* and add it as another child object of "Pipes". Adjust position, rotation, scale as needed.
   <div align="center">
     <img src="https://github.com/user-attachments/assets/3e3d2eff-6a0e-4768-83fe-1e3757096996" width="500" />
   </div>
