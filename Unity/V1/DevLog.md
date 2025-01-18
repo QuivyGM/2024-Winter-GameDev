@@ -222,28 +222,30 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   1. Create new Game Object with script component _logicScript_
   2. Create code for saving, showing, modifying score
 
-  ```csharp
-  using UnityEngine;
-  using UnityEngine.UI;  // for 'Text' variable
-  
-  public class LogicScript : MonoBehaviour {
-      public int playerScore=0;
-      public Text scoreText;
-      public GameObject gameOverScreen;
-  
-      void Start() {
-          playerScore = 0;
-      }
-      [ContextMenu("Increase Score")]
-      public void addScore(int scoreToAdd) {
-          playerScore += scoreToAdd;
-          scoreText.text = playerScore.ToString();
-      }
-  }
-  ```
-  - public reference for playerScore(int because lack of need for ) and scoreText
-  - to create/access a text variable there is a need _using UnityEngine.UI;_
-  - function is created for adding score and updating it to text (.ToString) and **[ContextMenu("Name_here")]** to access in Unity(allows testing)
+  > ### LogicScript
+  > 
+  > ```csharp
+  > using UnityEngine;
+  > using UnityEngine.UI;  // for 'Text' variable
+  > 
+  > public class LogicScript : MonoBehaviour {
+  >     public int playerScore=0;
+  >     public Text scoreText;
+  >     public GameObject gameOverScreen;
+  > 
+  >     void Start() {
+  >         playerScore = 0;
+  >     }
+  >     [ContextMenu("Increase Score")]
+  >     public void addScore(int scoreToAdd) {
+  >         playerScore += scoreToAdd;
+  >         scoreText.text = playerScore.ToString();
+  >     }
+  > }
+  > ```
+  > - public reference for playerScore(int because lack of need for ) and scoreText
+  > - to create/access a text variable there is a need _using UnityEngine.UI;_
+  > - function is created for adding score and updating it to text (.ToString) and **[ContextMenu("Name_here")]** to access in Unity(allows testing)
 
 **3. Trigger for score**
   1. Add gameObject that in the middle of Pipes with Box Collider 2D. To change shape change Size(in Collider) and check _Is Trigger_ and add script.
@@ -256,25 +258,27 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
         </div>
         - for ***Logic Manager*** object in Inspector Window create new Tag 'logic' and add tag 'logic' to Logic Manager(process done seperately)
         - code can now manually call object with Tag (single object with Tag excludes need for more specific finding)
-        
-        ```csharp
-        using UnityEngine;
-        public class PipeMiddleScript : MonoBehaviour
-        {
-            public LogicScript logic;
-        
-            void Start() {
-                logic = GameObject.FindGameObjectWithTag("logic").GetComponent<LogicScript>();
-                //find object with tag
-            }
-        
-            private void OnTriggerEnter2D(Collider2D collision) {
-                logic.addScore(1);
-            }
-        }
+
+       > ### PipeMiddleScript
+       > 
+       >  ```csharp
+       >  using UnityEngine;
+       >  public class PipeMiddleScript : MonoBehaviour
+       >  {
+       >      public LogicScript logic;
+       >  
+       >      void Start() {
+       >          logic = GameObject.FindGameObjectWithTag("logic").GetComponent<LogicScript>();
+       >          //find object with tag
+       >      }
+       >  
+       >      private void OnTriggerEnter2D(Collider2D collision) {
+       >          logic.addScore(1);
+       >      }
+       >  }
 
         ```
-  3. Put bird in different layer to make sure that it is Bird that is passing middle.
+  4. Put bird in different layer to make sure that it is Bird that is passing middle.
   ![image](https://github.com/user-attachments/assets/4d05a00d-65a0-4326-aebb-6dcf06df1b2c)
         <div style="display: flex; justify-content: center; gap: 10px;">
           <img src="https://github.com/user-attachments/assets/e3e5d240-4c7a-4b3a-a094-2c7135d25f01" style="max-width: 45%;"/>
@@ -282,22 +286,31 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
         </div>
         - allows checking if collision was on Bird's layer (+ future proof code by adding argument for addScore in LogicScript)
         
-        > Pipe Middle Script
+        > ### Pipe Middle Script
+        >
+        > ```csharp
+        > private void OnTriggerEnter2D(Collider2D collision) {
+        >     if (collision.gameObject.layer == 3) {
+        >         logic.addScore(1);
+        >     }        
+        > }
+        > ```
         
-        ```csharp
-        private void OnTriggerEnter2D(Collider2D collision) {
-            if (collision.gameObject.layer == 3) {
-                logic.addScore(1);
-            }        
-        }
-        ```
-        > Logic Script
-        ```csharp
-        public void addScore(int scoreToAdd) {
-            playerScore += scoreToAdd;
-            scoreText.text = playerScore.ToString();
-        }
-        ```
+        > ### Logic Script
+        > 
+        > ```csharp
+        > public void addScore(int scoreToAdd) {
+        >     playerScore += scoreToAdd;
+        >     scoreText.text = playerScore.ToString();
+        > }
+        > ```
 ---
 
 ## 5. Game Over Screen
+
+** 1. Create game Over text and button **
+  1. Create new gameObject Text, Button in Canvas object and adjust position, rotation, text.
+![image](https://github.com/user-attachments/assets/d8e2adba-458f-4750-ab97-2988441bceff)
+  - Button can call public function
+  3.
+
