@@ -106,13 +106,13 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
        > public float flapStrength; // preferably place above void Start()
        > 
        > void Update() {
-       > if (Input.GetKeyDown(KeyCode.Space) == true) //Input.GetKeyDown(KeyCode.Space)
-       > {
-       > myRigidbody.linearVelocity = Vector2.up * flapStrength;
-       >  //Vector2.up == (0,1) -> changes velocity to move towards (0,1) of current position (times flapStrength)
+       >   if (Input.GetKeyDown(KeyCode.Space) == true) //Input.GetKeyDown(KeyCode.Space)
+       >   {
+       >      myRigidbody.linearVelocity = Vector2.up * flapStrength;
+       >      //Vector2.up == (0,1) -> changes velocity to move towards (0,1) of current position (times flapStrength)
+       >    }
        >  }
-       >  }
-      >  ```
+       >  ```
 ---
 
 ## 3. Create Pipe
