@@ -308,7 +308,7 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
 
 ## 5. Game Over Screen
 
-** 1. Create game Over text and button **
+**1. Create game Over text and button**
   1. Create new gameObject Text, Button in Canvas object and adjust position, rotation, text.
 ![image](https://github.com/user-attachments/assets/d8e2adba-458f-4750-ab97-2988441bceff)
   - Button can call public function
