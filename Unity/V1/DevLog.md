@@ -166,46 +166,47 @@ Clone Coding following [GMTK's Unity tutorisl](https://www.youtube.com/watch?v=X
   5. Create timer to space out spawning of Pipes.
   6. **To spawn pipes at differing heights** create public float heightoffset and within spawnPipe create float lowestPoint and highestPoint using heighoffset. (allows adjustment in Unity screen)
   7. Change position value in Instantiate to *new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint))*. Pipes will now spawn in random height within set range.
-    > ### PipeSpawnScript
-    >
-    > ``` csharp
-    > using UnityEngine;
-    > using UnityEngine.Rendering;
-    > 
-    > public class PipeSpawnScript : MonoBehaviour
-    > {
-    >     public GameObject pipe;
-    >     public float spawnRate = 2;
-    >     private float timer = 0;
-    >     public float heightOffset = 2.3f;
-    > 
-    >     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    >     void Start()
-    >     {
-    >         spawnPipe();
-    >     }
-    > 
-    >     // Update is called once per frame
-    >     void Update()
-    >     {
-    >         if (timer < spawnRate) {
-    >             timer += Time.deltaTime;
-    >         }
-    >         else {
-    >             spawnPipe();
-    >             timer = 0;
-    >         }
-    >     }
-    > 
-    >     void spawnPipe() {
-    >         float lowestPoint = transform.position.y - heightOffset;
-    >         float highestPoint = transform.position.y + heightOffset;
-    > 
-    >         Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint)), transform.rotation);
-    >     }
-    > }
-    > ```
-    > - pipe spawn is made as function 'spawnPipe' to ease repetitive use
+     
+      > ### PipeSpawnScript
+      >
+      > ``` csharp
+      > using UnityEngine;
+      > using UnityEngine.Rendering;
+      > 
+      > public class PipeSpawnScript : MonoBehaviour
+      > {
+      >     public GameObject pipe;
+      >     public float spawnRate = 2;
+      >     private float timer = 0;
+      >     public float heightOffset = 2.3f;
+      > 
+      >     // Start is called once before the first execution of Update after the MonoBehaviour is created
+      >     void Start()
+      >     {
+      >         spawnPipe();
+      >     }
+      > 
+      >     // Update is called once per frame
+      >     void Update()
+      >     {
+      >         if (timer < spawnRate) {
+      >             timer += Time.deltaTime;
+      >         }
+      >         else {
+      >             spawnPipe();
+      >             timer = 0;
+      >         }
+      >     }
+      > 
+      >     void spawnPipe() {
+      >         float lowestPoint = transform.position.y - heightOffset;
+      >         float highestPoint = transform.position.y + heightOffset;
+      > 
+      >         Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint)), transform.rotation);
+      >     }
+      > }
+      > ```
+      > - pipe spawn is made as function 'spawnPipe' to ease repetitive use
 
 ---
 
