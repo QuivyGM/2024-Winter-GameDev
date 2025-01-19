@@ -19,3 +19,13 @@ Bird:
 Pipe:
 -Fixed gap between top and bottom.
 -Spawns every 2 seconds on right of screen and destroyed(despawned) when leaving screen.
+
+---
+
+# V2 - V1 with more features
+Start/Title Screen;
+Ahrsher bird death logic.
+Sound Effects.
+Particle cloud system.
+Exit button.
+Highscore system.
