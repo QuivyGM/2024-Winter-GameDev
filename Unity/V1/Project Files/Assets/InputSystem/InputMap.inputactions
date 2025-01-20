@@ -1,0 +1,106 @@
+{
+    "name": "InputMap",
+    "maps": [
+        {
+            "name": "PaddleInput",
+            "id": "4df801e0-4f95-4555-8939-afcd765d4368",
+            "actions": [
+                {
+                    "name": "leftUp",
+                    "type": "Button",
+                    "id": "14f4b930-fda4-4397-88df-a0377eb67c9b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "leftDown",
+                    "type": "Button",
+                    "id": "433769fc-aa51-4bb5-b089-a5ed5c6f16b7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "rightUp",
+                    "type": "Button",
+                    "id": "fd67cbb0-9be7-4beb-acd8-78f8eb8c5f80",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "rightDown",
+                    "type": "Button",
+                    "id": "9721a452-e634-4df8-8a14-6296d7832a06",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f70d31f8-164b-43f2-84cf-2f32e8e1118d",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "leftUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "871de815-89a5-4cb2-aaca-5546ed196592",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "leftDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2281abc0-4200-4caa-aa9e-48bf9b5a0e00",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "rightUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea5a8cb2-7fcf-41ec-a115-561d571d2221",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "rightDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "New Control Scheme",
+            "bindingGroup": "New Control Scheme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
