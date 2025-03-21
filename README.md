@@ -1,8 +1,8 @@
-# 2024-Winter-GameDev
-Game Developments made during winter of 2024.
-Porjects are divided into branches. Bigger/Development projects will be given their own repositories in time.
+file cache for game dev
 
-Current Branches
-------------------------
-1. Flappy Clone
-2. Pong
+link: https://www.youtube.com/watch?v=LOhfqjmasi0&t=468s
+
+Thoughts: 
+tile system looks too cheap/generic
+movement should be more fluent and smooth
+Need animation sheet
